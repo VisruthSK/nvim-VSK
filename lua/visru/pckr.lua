@@ -28,16 +28,16 @@ require("pckr").add({
 		"scottmckendry/cyberdream.nvim",
 		config = function()
 			require("cyberdream").setup({
-				transparent = false,
+				transparent = true,
 				italic_comments = true,
 				hide_fillchars = true,
 				borderless_telescope = true,
 				terminal_colors = true,
-				theme = {
-					colors = {
-						bg = "#000000",
-					},
-				},
+				-- theme = {
+				-- 	colors = {
+				-- 		bg = "#000000",
+				-- 	},
+				-- },
 				extensions = {
 					telescope = true,
 					dashboard = true,
@@ -85,4 +85,19 @@ require("pckr").add({
 	"mbbill/undotree",
 	"tpope/vim-fugitive",
 	"HiPhish/rainbow-delimiters.nvim",
+	"Luxed/aw-watcher-nvim",
+
+	{
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+		config = function()
+			require("lualine").setup({
+				-- ... other config
+				options = {
+					theme = "auto", -- "auto" will set the theme dynamically based on the colorscheme
+				},
+				-- ... other config
+			})
+		end,
+	},
 })
