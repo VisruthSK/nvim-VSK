@@ -97,6 +97,20 @@ require("pckr").add({
 			require("autoclose").setup()
 		end,
 	},
+	{
+		"willothy/nvim-cokeline",
+		requires = { { "nvim-lua/plenary.nvim" } },
+		config = function()
+			require("cokeline").setup()
+		end,
+	},
+	{
+		"folke/todo-comments.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("todo-comments").setup()
+		end,
+	},
 	"williamboman/mason-lspconfig.nvim",
 	"williamboman/mason.nvim",
 	"neovim/nvim-lspconfig",
