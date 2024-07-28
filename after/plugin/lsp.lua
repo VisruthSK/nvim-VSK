@@ -1,7 +1,6 @@
--- TODO need to fix LSPs
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "pyright", "julials" },
+	ensure_installed = { "lua_ls", "pyright", "julials", "pyre", "ltex" },
 })
 
 local lspconfig = require("lspconfig")
@@ -29,4 +28,6 @@ lspconfig.lua_ls.setup({
 	},
 })
 lspconfig.pyright.setup({})
+lspconfig.pyre.setup({})
+lspconfig.ltex.setup({})
 lspconfig.julials.setup({})

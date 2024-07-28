@@ -78,15 +78,6 @@ require("pckr").add({
 			require("Comment").setup()
 		end,
 	},
-
-	"williamboman/mason-lspconfig.nvim",
-	"williamboman/mason.nvim",
-	"neovim/nvim-lspconfig",
-	"mbbill/undotree",
-	"tpope/vim-fugitive",
-	"HiPhish/rainbow-delimiters.nvim",
-	"Luxed/aw-watcher-nvim",
-
 	{
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
@@ -100,4 +91,17 @@ require("pckr").add({
 			})
 		end,
 	},
+	{
+		"m4xshen/autoclose.nvim",
+		config = function()
+			require("autoclose").setup()
+		end,
+	},
+	"williamboman/mason-lspconfig.nvim",
+	"williamboman/mason.nvim",
+	"neovim/nvim-lspconfig",
+	"mbbill/undotree",
+	"tpope/vim-fugitive",
+	"HiPhish/rainbow-delimiters.nvim",
+	"Luxed/aw-watcher-nvim",
 })
